@@ -12,7 +12,7 @@ public class Triangle : IShape
     {
         if (x1 <= 0 || x2 <= 0 || x3 <= 0)
         {
-            throw new ArgumentOutOfRangeException("Сторона треугольника должна быть положительной величиной");
+            throw new ArgumentOutOfRangeException("x-params","Сторона треугольника должна быть положительной величиной");
         }
         if (x1 > x2 && x1 > x3)
         {
@@ -34,7 +34,7 @@ public class Triangle : IShape
         }
         if (SideAB >= SideAC + SideBC)
         {
-            throw new ArgumentOutOfRangeException("Большая сторона треугольника должна быть меньше суммы двух других его сторон");
+            throw new ArgumentOutOfRangeException(nameof(SideAB),"Большая сторона треугольника должна быть меньше суммы двух других его сторон");
         }
     }
     /// <summary>
