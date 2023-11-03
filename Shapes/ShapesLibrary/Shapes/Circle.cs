@@ -7,10 +7,14 @@ public class Circle : IShape
     {
         if (radius <= 0)
         {
-            throw new ArgumentOutOfRangeException("Радиус окружности должен быть положительной величиной");
+            throw new ArgumentOutOfRangeException(nameof(radius), "Радиус окружности должен быть положительной величиной");
         }
         Radius = radius;
     }
+    /// <summary>
+    /// Расчитать площадь
+    /// </summary>
+    /// <returns></returns>
     public double CalculateArea()
     {
         return Math.PI * Math.Pow(Radius, 2);
