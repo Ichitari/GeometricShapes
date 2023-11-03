@@ -1,0 +1,3 @@
+select p.Name as 'Продукт', c.Name as 'Категория' from Products p
+left join ProductСategoryRelationships r on p.Id = r.IdProduct
+left join Categories c on r.IdCategory = c.Id
